@@ -1,27 +1,14 @@
 # Chem-274B-Micropresentation
-This project will use graph-based analysis to find correlations between different health states, treatments, and diseases. This would be with the purpose of finding specific patterns of use for whatever is needed by the user.
+This project will use graph-based analysis to find correlations between different drugs and their side effects they cause. Using Networkx, we use a myriad of algorithms to analyze the data. 
 
-## Definitions
+## How to Run
+As long as each cell runs, you all the dependencies should work just fine. There is, however, a requirements.txt file if needed.
 
-We need to define certain terms so that we can properly understand how the program works, and how to use it: 
+You must open the micropresentation.ipynb jupyter notebook file to run the program. Our group worked on google collabs. You must put the datasets `ChChSe-Decagon_polypharmacy.csv` and `sample.csv ` in the same folder as the project you are running the jupyter notebook so that you can run it. Within the file, you can run each cell in order. 
 
-Health State - This includes symptoms, conditions, and any state that can be defined medically (i.e. nausea, pain, sadness, etc.)
+Currently, the program uses the sample.csv file as to not have too long of a runtime. However, you can change this to use the full file (with 4 million data points) by changing the 41st line from: 
 
-Treatment - This includes medications and therapies that can be used to help modulate health states (increase or decrease symptoms, etc.) and are used in response to either health states or diseases
+`for _, row in sample.iterrows():` to `for _, row in df.iterrows():`
 
-Disease - This is something that has a cause, health states, and potential treatments. However, they're not necessary (COVID can sometimes be asymptomatic, which I guess in itself could be a health state)
 
-## What this program should do
 
-Using networkx:
-
-- This program should be able to input data, and all the related attributes
-- It should be able to create an edge between two attributes after already inputing the data (and remove it)
-- It should be able to find some correlations after the fact related to some or multiple attributes
-- It should be able to make visualizations
-
-## Specific questions
-
-- How should the data be input into the graph? Will we store the attribute and the description as a tuple? 
-- How are the correlations going to happen? What kind of correlations are we expecting to find? What algorithms already exist that we can utilize? 
-- Where are we going to find data from? I'm sure this kind of data can't be too hard to find, but we have to find it
